@@ -19,6 +19,9 @@
 		01553CC219B497E600774FE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01553CAA19B497E600774FE8 /* UIKit.framework */; };
 		01553CCA19B497E600774FE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01553CC819B497E600774FE8 /* InfoPlist.strings */; };
 		01553CCC19B497E600774FE8 /* TouchTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01553CCB19B497E600774FE8 /* TouchTrackerTests.m */; };
+		01553CD719B4A64C00774FE8 /* BNRLIne.m in Sources */ = {isa = PBXBuildFile; fileRef = 01553CD619B4A64C00774FE8 /* BNRLIne.m */; };
+		01553CDA19B4A69400774FE8 /* BNRDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01553CD919B4A69400774FE8 /* BNRDrawView.m */; };
+		01553CDD19B4A6C500774FE8 /* BNRDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01553CDC19B4A6C500774FE8 /* BNRDrawViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,12 @@
 		01553CC719B497E600774FE8 /* TouchTrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TouchTrackerTests-Info.plist"; sourceTree = "<group>"; };
 		01553CC919B497E600774FE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		01553CCB19B497E600774FE8 /* TouchTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchTrackerTests.m; sourceTree = "<group>"; };
+		01553CD519B4A64C00774FE8 /* BNRLIne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRLIne.h; sourceTree = "<group>"; };
+		01553CD619B4A64C00774FE8 /* BNRLIne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRLIne.m; sourceTree = "<group>"; };
+		01553CD819B4A69400774FE8 /* BNRDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRDrawView.h; sourceTree = "<group>"; };
+		01553CD919B4A69400774FE8 /* BNRDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRDrawView.m; sourceTree = "<group>"; };
+		01553CDB19B4A6C500774FE8 /* BNRDrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRDrawViewController.h; sourceTree = "<group>"; };
+		01553CDC19B4A6C500774FE8 /* BNRDrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRDrawViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +120,12 @@
 				01553CB619B497E600774FE8 /* BNRAppDelegate.m */,
 				01553CB819B497E600774FE8 /* Images.xcassets */,
 				01553CAD19B497E600774FE8 /* Supporting Files */,
+				01553CD519B4A64C00774FE8 /* BNRLIne.h */,
+				01553CD819B4A69400774FE8 /* BNRDrawView.h */,
+				01553CDB19B4A6C500774FE8 /* BNRDrawViewController.h */,
+				01553CDC19B4A6C500774FE8 /* BNRDrawViewController.m */,
+				01553CD919B4A69400774FE8 /* BNRDrawView.m */,
+				01553CD619B4A64C00774FE8 /* BNRLIne.m */,
 			);
 			path = TouchTracker;
 			sourceTree = "<group>";
@@ -241,7 +256,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				01553CB319B497E600774FE8 /* main.m in Sources */,
+				01553CDD19B4A6C500774FE8 /* BNRDrawViewController.m in Sources */,
+				01553CD719B4A64C00774FE8 /* BNRLIne.m in Sources */,
 				01553CB719B497E600774FE8 /* BNRAppDelegate.m in Sources */,
+				01553CDA19B4A69400774FE8 /* BNRDrawView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
