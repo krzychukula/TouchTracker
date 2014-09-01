@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Big Nerd Ranch. All rights reserved.
 //
 
-#import "BNRLIne.h"
+#import "BNRLine.h"
 
 @implementation BNRLIne
 

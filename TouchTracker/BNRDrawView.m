@@ -7,6 +7,7 @@
 //
 
 #import "BNRDrawView.h"
+#import "BNRLine.h"
 
 @implementation BNRDrawView
 
