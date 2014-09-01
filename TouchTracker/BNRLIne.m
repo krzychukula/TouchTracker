@@ -8,6 +8,6 @@
 
 #import "BNRLine.h"
 
-@implementation BNRLIne
+@implementation BNRLine
 
 @end
