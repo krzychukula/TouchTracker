@@ -207,6 +207,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Big Nerd Ranch";
 				TargetAttributes = {
+					01553CA219B497E600774FE8 = {
+						DevelopmentTeam = 8262AX47FV;
+					};
 					01553CBD19B497E600774FE8 = {
 						TestTargetID = 01553CA219B497E600774FE8;
 					};
@@ -456,6 +459,7 @@
 				01553CD119B497E600774FE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01553CD219B497E600774FE8 /* Build configuration list for PBXNativeTarget "TouchTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +468,7 @@
 				01553CD419B497E600774FE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
