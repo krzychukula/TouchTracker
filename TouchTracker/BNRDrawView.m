@@ -242,6 +242,7 @@
     if (gr.state == UIGestureRecognizerStateBegan) {
         CGPoint point = [gr locationInView:self];
         if(self.selectedLine != [self lineAtPoint:point]){
+            //closes line is different than selected. stop move
             self.selectedLine = nil;
             //hide the menu if no line is selected
             [[UIMenuController sharedMenuController] setMenuVisible:NO animated:YES];
