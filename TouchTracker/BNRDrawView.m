@@ -32,6 +32,10 @@
         doubleTapRecognizer.delaysTouchesBegan = YES;
         
         [self addGestureRecognizer:doubleTapRecognizer];
+        
+        UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+        tapRecognizer.delaysTouchesBegan = YES;
+        [self addGestureRecognizer:tapRecognizer];
     }
     return self;
 }
@@ -117,6 +121,11 @@
     [self.linesInProgress removeAllObjects];
     [self.finishedLines removeAllObjects];
     [self setNeedsDisplay];
+}
+
+- (void)tap:(UITapGestureRecognizer *)gr
+{
+    NSLog(@"Recognized tap");
 }
 
 
