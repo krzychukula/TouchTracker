@@ -161,8 +161,41 @@
     CGPoint point = [gr locationInView:self];
     self.selectedLine = [self lineAtPoint:point];
     
+    if (self.selectedLine) {
+        //make ourselves the target of menu item action message
+        [self becomeFirstResponder];
+        
+        //grab the menu conroller
+        UIMenuController *menu = [UIMenuController sharedMenuController];
+        
+        //create a new 'delete' UIMenuItem
+        UIMenuItem *deleteItem = [[UIMenuItem alloc] initWithTitle:@"Delete" action:@selector(deleteLine:)];
+        
+        menu.menuItems = @[deleteItem];
+        
+        //tell the menu where it should come from and show it
+        [menu setTargetRect:CGRectMake(point.x, point.x, 2, 2) inView:self];
+        [menu setMenuVisible:YES animated:YES];
+    }else{
+        //hide the menu if no line is selected
+        [[UIMenuController sharedMenuController] setMenuVisible:NO animated:YES];
+    }
+    
     [self setNeedsDisplay];
 }
 
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (void)deleteLine:(id)sender
+{
+    //remove the selected line from the list of _finishedLines
+    [self.finishedLines removeObject:self.selectedLine];
+    
+    //redraw everything
+    [self setNeedsDisplay];
+}
 
 @end
