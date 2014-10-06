@@ -125,9 +125,12 @@
         NSValue *key = [NSValue valueWithNonretainedObject:t];
         BNRLine *line = self.linesInProgress[key];
         
-        [self.finishedLines addObject:line];
-        [self.linesInProgress removeObjectForKey:key];
-
+        if (line) {
+            [self.finishedLines addObject:line];
+            [self.linesInProgress removeObjectForKey:key];
+        }
+        
+        
     }
     
     [self setNeedsDisplay];
@@ -271,6 +274,8 @@
         
         //make translation 0,0 again
         [gr setTranslation:CGPointZero inView:self];
+        
+        [self.linesInProgress removeAllObjects];
     }
 }
 
