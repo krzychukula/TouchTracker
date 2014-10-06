@@ -238,6 +238,16 @@
     if (!self.selectedLine) {
         return;
     }
+    //if move is far away from selected line then it should be drawing new line
+    if (gr.state == UIGestureRecognizerStateBegan) {
+        CGPoint point = [gr locationInView:self];
+        if(self.selectedLine != [self lineAtPoint:point]){
+            self.selectedLine = nil;
+            //hide the menu if no line is selected
+            [[UIMenuController sharedMenuController] setMenuVisible:NO animated:YES];
+            return;
+        }
+    }
     //when the pan recognizer changes its position
     if (gr.state == UIGestureRecognizerStateChanged) {
         //how far has the pan moved?
