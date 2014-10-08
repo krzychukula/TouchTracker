@@ -13,7 +13,4 @@
 @property (nonatomic) CGPoint begin;
 @property (nonatomic) CGPoint end;
 
-//memory leak
-@property (nonatomic, strong) NSMutableArray *containingArray;
-
 @end

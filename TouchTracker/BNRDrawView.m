@@ -128,8 +128,7 @@
         if (line) {
             [self.finishedLines addObject:line];
             [self.linesInProgress removeObjectForKey:key];
-            
-            line.containingArray = self.finishedLines;
+
         }
         
         
@@ -142,11 +141,7 @@
 {
     NSLog(@"Recognized Double Tap");
     [self.linesInProgress removeAllObjects];
-    //memory leak
-    //[self.finishedLines removeAllObjects];
-    //memory leak
-    self.finishedLines = [[NSMutableArray alloc] init];
-    
+    [self.finishedLines removeAllObjects];
     [self setNeedsDisplay];
 }
 
