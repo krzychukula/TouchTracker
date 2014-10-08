@@ -279,5 +279,16 @@
         [self.linesInProgress removeAllObjects];
     }
 }
+//offend analyzer
+- (int)numberOfLines
+{
+    int count;
+    
+    //check that they are non-ni before we add their counts...
+    if (self.linesInProgress && self.finishedLines)
+        count = [self.linesInProgress count] + [self.finishedLines count];
+    
+    return count;
+}
 
 @end
