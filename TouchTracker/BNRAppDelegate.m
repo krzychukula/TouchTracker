@@ -21,6 +21,11 @@
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+#ifdef VIEW_DEBUG
+    NSLog(@"recursiveDescription %@", [self.window performSelector:@selector(recursiveDescription)]);
+#endif
+    
     return YES;
 }
 
